@@ -5,23 +5,41 @@
     $numero1=$_POST["num1"];
     $numero2=$_POST["num2"];
     $operacion=$_POST["operacion"];
+    $operacion=$_POST["operacion"];
+    calcular($operacion);
 
-    if(!strcmp("Suma",$operacion)){
+  }
+
+
+
+function calcular($calculo){
+
+    if(!strcmp("Suma",$calculo)){
+      global $numero1;
+      global $numero2;
       echo "el resultado es: " . ($numero1+$numero2);
     }
-    if(!strcmp("Resta",$operacion)){
+    if(!strcmp("Resta",$calculo)){
+      global $numero1;
+      global $numero2;   
       echo "el resultado es: " . ($numero1-$numero2);
     }
-    if(!strcmp("Multiplicación",$operacion)){
+    if(!strcmp("Multiplicación",$calculo)){
+      global $numero1;
+      global $numero2;
       echo "el resultado es: " . ($numero1*$numero2);
     }
-    if(!strcmp("División",$operacion)){
+    if(!strcmp("División",$calculo)){
+      global $numero1;
+      global $numero2;
       echo "el resultado es: " . ($numero1/$numero2);
     }
-    if(!strcmp("Módulo",$operacion)){
+    if(!strcmp("Módulo",$calculo)){
+      global $numero1;
+      global $numero2;
       echo "el resultado es: " . ($numero1%$numero2);
     }
 
-  }
+}
 
 ?>
